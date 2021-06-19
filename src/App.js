@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
-// import logo from './logo.svg';
 import './App.css';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useDispatch, useSelector } from 'react-redux';
-// import { addToDoAction } from './actions/todos';
 import { Container, Form, Button, Col, Row, ButtonGroup, ToggleButton } from 'react-bootstrap';
 
 
@@ -17,11 +14,7 @@ const App = (props) => {
   const dispatch = useDispatch();
   const [todo, setTodo] = useState({})
 
-  // const handleAddTodo = () => {
-  //   dispatch({
-  //     type: 'ADD_TODO', todo: { ...todo }
-  //   })
-  // }
+
   const setChecked = (checked, todo) => {
     dispatch({
       type: 'UPDATE_IS_CHECK', checked: checked, todo
